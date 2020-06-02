@@ -1,0 +1,28 @@
+{
+  "name": "foodfy",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000f\u0000o\u0000o\u0000d\u0000f\u0000y\u0000\r\u0000 \u0000",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odairdev/foodfy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/odairdev/foodfy/issues"
+  },
+  "homepage": "https://github.com/odairdev/foodfy#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
