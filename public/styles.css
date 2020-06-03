@@ -201,4 +201,9 @@ footer {
     font-size: 12px;
     color: #999999;
     text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-show-event {
+    
 }
