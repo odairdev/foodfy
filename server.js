@@ -22,14 +22,14 @@ server.get('/receitas', function(req, res) {
     res.render('receitas', {items: receitas})
 })
 
-server.get('/receita/:index', function(req, res) {
-    const receitaIndex = req.params.index
+server.get('/recipes/:index', function(req, res) {
+    const recipeIndex = req.params.index
 
-    if (receitaIndex >= receitas.length) {
-        return res.send('Recipe not found')
+    if (recipeIndex >= receitas.length) {
+        return res.send('Recipe not found.')
     }
 
-    res.render('receita', {item: receitas[receitaIndex]})
+    res.render('receita', {item: receitas[recipeIndex]})
 })
 
 server.listen(5000, function() {

@@ -191,6 +191,18 @@ footer {
 }
 
 /* ---recipe-page--- */
-.recipe_image-container {
+.recipe_image-container img {
+    height: 280px;
     width: 100%;
+    border-radius: 15px;
+}
+
+.recipe {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.recipe h1 {
+    font-size: 36px;
+    color: #111;
 }

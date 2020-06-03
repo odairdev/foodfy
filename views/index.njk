@@ -17,7 +17,7 @@
     <section class="cards">
         {% for item in items %}
 
-            <div class="card" id="burger">
+            <div class="card" id="{{loop.index0}}">
                 <div class="card_img-content">
                     <img src="{{item.image}}" alt="{{item.title}}">
                 </div>
