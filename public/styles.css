@@ -189,3 +189,8 @@ footer {
     padding: 20px;
     color: #999999;
 }
+
+/* ---recipe-page--- */
+.recipe_image-container {
+    width: 100%;
+}
