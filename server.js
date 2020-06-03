@@ -2,7 +2,7 @@ const express = require('express')
 const nunjucks = require('nunjucks')
 
 const server = express();
-const receitas = require('./data')
+const recipes = require('./data')
 
 server.set('view engine', 'njk')
 server.use(express.static('public'))
@@ -11,25 +11,25 @@ nunjucks.configure('views', {
 })
 
 server.get('/', function(req, res) {
-    res.render('index', {items: receitas})
+    res.render('index', {items: recipes})
 })
 
-server.get('/sobre', function(req, res) {
-    res.render('sobre')
+server.get('/about', function(req, res) {
+    res.render('about')
 })
 
-server.get('/receitas', function(req, res) {
-    res.render('receitas', {items: receitas})
+server.get('/recipes', function(req, res) {
+    res.render('recipes', {items: recipes})
 })
 
-server.get('/recipes/:index', function(req, res) {
+server.get('/recipe/:index', function(req, res) {
     const recipeIndex = req.params.index
 
-    if (recipeIndex >= receitas.length) {
+    if (recipeIndex >= recipes.length) {
         return res.send('Recipe not found.')
     }
 
-    res.render('receita', {item: receitas[recipeIndex]})
+    res.render('recipe', {item: recipes[recipeIndex]})
 })
 
 server.listen(5000, function() {

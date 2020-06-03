@@ -9,6 +9,13 @@
     <div class="recipe">
         <h1>{{item.title}}</h1>
         <p>{{item.author}}</p>
+
+        <ul class="recipe-ingredients">
+            <h1>Ingredientes</h1>
+            {% for ingredient in item.ingredients %}
+                <li>{{ingredient}}</li>
+            {% endfor %}
+        </ul>
     </div>
 
 {% endblock %}
