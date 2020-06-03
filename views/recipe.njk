@@ -7,15 +7,33 @@
     </div>
 
     <div class="recipe">
-        <h1>{{item.title}}</h1>
-        <p>{{item.author}}</p>
+        <div class="recipe-info">
+            <h1>{{item.title}}</h1>
+            <p>{{item.author}}</p>
+        </div>
+        
 
-        <ul class="recipe-ingredients">
-            <h1>Ingredientes</h1>
+        <ul class="recipe-list">
+            <h2>Ingredientes <span class="btn-show">esconder</span></h2>
             {% for ingredient in item.ingredients %}
                 <li>{{ingredient}}</li>
             {% endfor %}
         </ul>
+
+        <h2>Modo de preparo</h2>
+
+        <ul class="recipe-list">
+
+            {% for step in item.preparation %}
+                <li>{{step}}</li>
+            {% endfor %}
+
+        </ul>
+
+        <h2 class="{{'' if item.information else 'no-information'}}">Informações Adicionais</h2>
+
+        <p>{{item.information}}</p>
+
     </div>
 
 {% endblock %}

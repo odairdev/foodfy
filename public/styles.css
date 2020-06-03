@@ -156,7 +156,11 @@ footer {
 
 .recipe {
     margin-top: 50px;
+}
+
+.recipe-info {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .recipe h1 {
@@ -164,22 +168,37 @@ footer {
     color: #111;
 }
 
-.recipe-ingredients {
-    margin-top: 50px;
+.recipe h2 {
+    font-size: 24px;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.recipe p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+}
+
+.recipe-list {
     margin-bottom: 30px;
     text-align: left;
     list-style-position: inside;
     padding-left: 0;
 }
 
-.recipe-ingredients h1 {
-    font-size: 24px;
-    color: #111;
-    margin-bottom: 20px;
-}
-
-.recipe-ingredients li {
+.recipe-list li {
     font-size: 18px;
     line-height: 28px;
     color: #444444;
+}
+
+.no-information {
+    display: none;
+}
+
+.btn-show {
+    font-size: 12px;
+    color: #999999;
+    text-transform: uppercase;
 }

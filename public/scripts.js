@@ -1,4 +1,5 @@
 const cards = document.querySelectorAll('.card')
+const showFunction = document.querySelector('.btn-show')
 
 for (let card of cards) {
     
