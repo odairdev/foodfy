@@ -24,5 +24,16 @@
         <footer>
             <div id="footer-links" class="links">Todos direitos reservados, receitas Foodfy.</div>
         </footer>
+
+        <script>
+            const menuLinks = document.querySelectorAll("header .links a")
+            const currentPage = location.pathname
+                
+            for (link of menuLinks) {
+                if (currentPage.includes(link.getAttribute('href'))) {
+                    link.classList.add("active")
+                }
+            }
+        </script>
     </body>
 </html>
