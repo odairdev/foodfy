@@ -1,0 +1,44 @@
+<div class="recipe-identification clearfix">
+    <h3 class="admin-h3">Imagem da Receita</h3>
+    <input 
+        type="url" 
+        name="image" 
+        placeholder="https://Imagem.com/macarrao"
+        value="{{recipe.image}}">
+
+    <h3 class="admin-h3">Nome da receita</h3>
+    <input 
+        type="text" 
+        name="title" 
+        placeholder="Macarrão com salsicha"
+        value="{{recipe.title}}">
+    
+    <h3 class="admin-h3">Autor</h3>
+    <input 
+        type="text" 
+        name="author"
+        placeholder="Marcelo Almeida"
+        value="{{recipe.author}}">
+</div>
+
+<h3 class="admin-h3">Ingredientes</h3>
+<textarea 
+    name="ingredients" 
+    placeholder="Macarrão, Salsicha">
+    {{recipe.ingredients}}
+</textarea>
+
+<h3 class="admin-h3">Modo de preparo</h3>
+<textarea 
+    name="preparation" 
+    placeholder="Coloque o macarrao na panela, Coloque a salsicha na panela">
+    {{recipe.preparation}}
+</textarea>
+
+<h3 class="admin-h3">Informações Adicionais</h3>
+<textarea 
+    name="information" 
+    class="text-information" 
+    placeholder="Preaqueça a panela...">
+    {{recipe.information}}
+</textarea>

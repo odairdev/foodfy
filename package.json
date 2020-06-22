@@ -4,7 +4,7 @@
   "description": "��#\u0000 \u0000f\u0000o\u0000o\u0000d\u0000f\u0000y\u0000\r\u0000 \u0000",
   "main": "server.js",
   "scripts": {
-    "start": "npm-run-all -p nodemon browsersync",
+    "start": "npm-run-all -p browsersync nodemon",
     "nodemon": "nodemon server.js",
     "browsersync": "browser-sync start --proxy http://localhost:5000 --files '/public, /views'"
   },

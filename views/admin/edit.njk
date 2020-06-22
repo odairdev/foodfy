@@ -1,0 +1,22 @@
+{% extends "layout_admin.njk" %}
+
+{% block content %}
+
+<h2 class="admin-h2" style="float: left;">Editando Receita</h2>
+
+<form action="/admin/recipes?_method=PUT" method="post">
+    <input type="hidden" name="id" value="{{recipe.id}}">
+
+    {% include "admin/fields.njk" %}
+
+    <button type="submit" class="button" style="float: right; margin-top: 20px; margin-left: 24px;">Salvar</button>
+</form>
+
+<form id="form-delete" action="/admin/recipes?_method=DELETE" method="post">
+    <input type="hidden" name="id" value="{{recipe.id}}">
+    <button type="submit" class="button" style="float: right; margin-top: 20px; background: lightcoral;">Deletar</button>
+</form>
+
+{% include "confirm.njk" %}
+
+{% endblock content %}

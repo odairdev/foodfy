@@ -1,29 +1,27 @@
 {% extends "layout_admin.njk" %}
 
 {% block content %}
-<h2 id="admin-h2">Gerenciar Receitas</h2>
 
-<a href="/admin/create" class="button">Nova Receita</a>
+<div class="heading_n_btn">
+    <h2 class="admin-h2">Gerenciar Receitas</h2>
+    <a href="/admin/create" class="button" style="float: right; margin-top: 20px;">Nova Receita</a>
+    <span class="clearfix"></span>
+</div>
+
 
 <div class="admin-cards">
-    <div class="admin-card">
-        <div class="admin-card_img-content">
-            <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="">
+    {% for recipe in recipes %}
+        <div class="admin-card">
+            <div class="admin-card_img-content">
+                <img src="{{recipe.image}}" alt="">
+            </div>
+            <div class="admin-card-content">
+                <p class="admin-card-title">{{recipe.title}} </p>
+                <p class="admin-card-author">{{recipe.author}}</p>
+                <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+            </div>
         </div>
-        <div class="admin-card-content">
-            <p class="admin-card-title">testando titulo</p>
-            <p class="admin-card-author">Autor teste</p>
-        </div>
-    </div>
-
-    <div class="admin-card">
-        <div class="admin-card_img-content">
-            <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="">
-        </div>
-        <div class="admin-card-content">
-            <p class="admin-card-title">testando titulo</p>
-            <p class="admin-card-author">Autor teste</p>
-        </div>
-    </div>
+    {% endfor %}
 </div>
+
 {% endblock content %}

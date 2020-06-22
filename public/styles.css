@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 :root {
     --color--wrapper--: #FBDFDB;
@@ -28,6 +28,12 @@ body p {
     line-height: 28px;
     color: #000000;
     opacity: 0.7;
+}
+
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 header div {
@@ -231,17 +237,49 @@ footer {
 }
 /* ---ADMIN--- */
 /* index */
-#admin-h2 {
+.admin-links {
+    position: relative;
+    z-index: 1;
+}
+.admin-links a {
+    text-decoration: none;
+    color: white;
+}
+.admin-h2 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.admin-h3 {
+    margin-top: 20px;
+}
+
+.heading_n_btn h2 {
+    float: left;
+}
+
+.heading_n_btn a {
+    float: right;
+    margin-top: 20px;
+}
+
+button[type="submit"] {
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .button {
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 4px;
     background-color: var(--color--purple--);
     color: white;
+    cursor: pointer;
 }
+
+
 
 .admin-cards {
     margin-top: 20px;
@@ -281,3 +319,31 @@ footer {
     font-size: 14px;
 }
 
+/* ---ADMIN-INPUTS--- */
+input,
+textarea {
+    margin-top: 10px;
+    width: 100%;
+    padding: 4px 0 46px 4px;
+    background: #fff;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.recipe-identification {
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+    gap: 10px;
+}
+
+.recipe-identification input {
+    padding: 4px 0 28px 4px;
+}
+
+.text-information {
+    height: 200px;
+}
