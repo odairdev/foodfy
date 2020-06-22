@@ -1,0 +1,29 @@
+{% extends "layout_admin.njk" %}
+
+{% block content %}
+<h2 id="admin-h2">Gerenciar Receitas</h2>
+
+<a href="/admin/create" class="button">Nova Receita</a>
+
+<div class="admin-cards">
+    <div class="admin-card">
+        <div class="admin-card_img-content">
+            <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="">
+        </div>
+        <div class="admin-card-content">
+            <p class="admin-card-title">testando titulo</p>
+            <p class="admin-card-author">Autor teste</p>
+        </div>
+    </div>
+
+    <div class="admin-card">
+        <div class="admin-card_img-content">
+            <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="">
+        </div>
+        <div class="admin-card-content">
+            <p class="admin-card-title">testando titulo</p>
+            <p class="admin-card-author">Autor teste</p>
+        </div>
+    </div>
+</div>
+{% endblock content %}

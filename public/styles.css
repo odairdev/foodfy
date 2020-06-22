@@ -2,6 +2,7 @@
 
 :root {
     --color--wrapper--: #FBDFDB;
+    --color--purple--: #6558C3;
 }
 
 * {
@@ -12,8 +13,14 @@
 }
 
 body {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrap {
     margin: 0 auto;
     max-width: 940px;
+    padding-bottom: 62px;
 }
 
 body p {
@@ -29,6 +36,15 @@ header div {
     display: inline-block;
 }
 
+.admin-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+}
+
 .logo-img {
     padding-left: 0;
     position: relative;
@@ -41,7 +57,7 @@ header div a {
 
 .links  a {
     text-decoration: none;
-    color: #111111;
+    color: #111;
 }
 
 .active {
@@ -87,6 +103,7 @@ header div a {
 
 .cards {
     margin-top: 20px;
+    margin-bottom: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
@@ -120,6 +137,10 @@ header div a {
 }
 
 /* ---Sobre---*/
+.sobre {
+    margin-bottom: 50px;
+}
+
 main h1 {
     font-weight: bold;
     font-size: 24px;
@@ -140,6 +161,7 @@ footer {
     margin-top: 30px;
     position: absolute;
     left: 0;
+    bottom: 0;
     width: 100%;
     height: 62px;
     text-align: center;
@@ -207,7 +229,55 @@ footer {
     text-transform: uppercase;
     cursor: pointer;
 }
-
-.btn-show-event {
-    
+/* ---ADMIN--- */
+/* index */
+#admin-h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+.button {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: var(--color--purple--);
+    color: white;
+}
+
+.admin-cards {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.admin-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    height: 100px;
+    cursor: pointer;
+}
+
+.admin-card_img-content img {
+    width:100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.admin-card-content {
+    margin-top: 10px;
+}
+
+.admin-card-title {
+    color: #111111;
+    opacity: 1;
+}
+
+.admin-card-author {
+    opacity: 1;
+    color: #777777;
+    font-size: 14px;
+}
+
