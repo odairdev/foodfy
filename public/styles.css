@@ -246,12 +246,17 @@ footer {
     color: white;
 }
 .admin-h2 {
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
 .admin-h3 {
     margin-top: 20px;
+}
+
+.heading_n_btn h2,
+.heading_n_btn a {
+    margin-top: 40px;
 }
 
 .heading_n_btn h2 {
@@ -260,14 +265,19 @@ footer {
 
 .heading_n_btn a {
     float: right;
-    margin-top: 20px;
 }
 
-button[type="submit"] {
+button[type="submit"],
+button[type="button"] {
     border: none;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 40px;
+}
+
+button[type="button"] {
+    margin-top: 4px;
 }
 
 .button {
@@ -279,7 +289,11 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-
+button.btn-edit {
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 
 .admin-cards {
     margin-top: 20px;
@@ -320,18 +334,19 @@ button[type="submit"] {
 }
 
 /* ---ADMIN-INPUTS--- */
-input,
+input, 
 textarea {
     margin-top: 10px;
     width: 100%;
-    padding: 4px 0 46px 4px;
-    background: #fff;
     outline: none;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 28px;
+}
+textarea {
+    padding: 4px 0 46px 4px;
 }
 
 .recipe-identification {
@@ -342,8 +357,4 @@ textarea {
 
 .recipe-identification input {
     padding: 4px 0 28px 4px;
-}
-
-.text-information {
-    height: 200px;
 }

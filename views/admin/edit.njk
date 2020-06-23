@@ -9,12 +9,12 @@
 
     {% include "admin/fields.njk" %}
 
-    <button type="submit" class="button" style="float: right; margin-top: 20px; margin-left: 24px;">Salvar</button>
+    <button type="submit" class="button btn-edit" style="margin-left: 24px;">Salvar</button>
 </form>
 
 <form id="form-delete" action="/admin/recipes?_method=DELETE" method="post">
     <input type="hidden" name="id" value="{{recipe.id}}">
-    <button type="submit" class="button" style="float: right; margin-top: 20px; background: lightcoral;">Deletar</button>
+    <button type="submit" class="button btn-edit" style="background: lightcoral;">Deletar</button>
 </form>
 
 {% include "confirm.njk" %}

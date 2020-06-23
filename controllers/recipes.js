@@ -69,8 +69,8 @@ exports.post = function(req, res) {
             image, 
             title, 
             author, 
-            ingredients: req.body.ingredients.split(","), 
-            preparation: req.body.preparation.split(","), 
+            ingredients, 
+            preparation, 
             information
         }
 
@@ -94,8 +94,6 @@ exports.put = function(req, res) {
         ...foundRecipe,
         ...req.body,
         id: Number(req.params.id),
-        ingredients: req.body.ingredients.split(","), 
-        preparation: req.body.preparation.split(",")
     }
 
     data.recipes[id] = recipe
