@@ -1,0 +1,22 @@
+{% extends 'layout_admin.njk' %}
+
+{% block content %}
+
+<div class="headline-container">
+    <div><h2 class="admin-h2">Chef: {{chef.name}}</h2></div>
+    <div><a href="/admin/chefs/{{chef.id}}/edit" class="button">Editar Chef</a></div>
+</div>
+
+<div class="chef_image-wrapper">
+    <img src="{{chef.avatar_url}}" alt="Avatar de {{chef.name}}">
+    <h1>{{chef.name}}</h1>
+    <p>receitas</p>
+</div>
+
+<h3 class="admin-h3">Receitas</h3>
+
+{% endblock content %}
+
+
+
+ 

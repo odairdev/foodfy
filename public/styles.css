@@ -3,6 +3,7 @@
 :root {
     --color--wrapper--: #FBDFDB;
     --color--purple--: #6558C3;
+    --color--dark-purple--: #41356b;
 }
 
 * {
@@ -57,11 +58,8 @@ header div {
     top: 8px;
 }
 
-header div a {
-    padding: 30px;
-}
-
 .links  a {
+    padding: 30px;
     text-decoration: none;
     color: #111;
 }
@@ -243,8 +241,14 @@ footer {
 }
 .admin-links a {
     text-decoration: none;
+    text-transform: uppercase;
     color: white;
 }
+
+.admin-links a + a {
+    margin-left: 30px;
+}
+
 .admin-h2 {
     margin-top: 40px;
     margin-bottom: 20px;
@@ -254,17 +258,37 @@ footer {
     margin-top: 20px;
 }
 
-.heading_n_btn h2,
-.heading_n_btn a {
+.headline-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.headline-container div > h2,
+.headline-container div a,
+.headline-container div button {
+    margin: 0;
+}
+
+.headline-container div a,
+.headline-container div button {
+    justify-self: end;
+}
+
+.headline-container > div{
     margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-.heading_n_btn h2 {
-    float: left;
+button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
 }
 
-.heading_n_btn a {
-    float: right;
+button:focus {
+    outline: none;
+    outline-offset: none;
 }
 
 button[type="submit"],
@@ -282,11 +306,15 @@ button[type="button"] {
 
 .button {
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 8px 16px;
     border-radius: 4px;
     background-color: var(--color--purple--);
     color: white;
     cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color--dark-purple--);
 }
 
 button.btn-edit {
@@ -345,6 +373,12 @@ textarea {
     font-size: 18px;
     line-height: 28px;
 }
+
+input[type="text"],
+input[type="url"] {
+padding: 4px 8px;
+}
+
 textarea {
     padding: 4px 0 46px 4px;
 }
@@ -357,4 +391,49 @@ textarea {
 
 .recipe-identification input {
     padding: 4px 0 28px 4px;
+}
+
+/* ---CHEFS--- */
+.chef_image-wrapper {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.chef_image-wrapper img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.chef-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.chef-card {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+.chef-card img {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+}
+
+.chef-card_content {
+    margin-left: 20px;
+}
+
+
+.chef-card_content a {
+    text-decoration: none;
+    color: var(--color--purple--);
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 24px;
 }
