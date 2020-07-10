@@ -21,5 +21,14 @@ module.exports = {
             iso: `${year}-${month}-${day}`,
             format: `${day}-${month}-${year}`
         }
+    },
+
+    hasBlankFields(data) {
+        const keys = Object.keys(data)
+
+        for (key of keys) {
+            if(data[key] == '') return true
+        }
+        return false
     }
 }

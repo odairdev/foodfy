@@ -1,4 +1,5 @@
 const Chef = require('../models/chef')
+const { hasBlankFields } = require('../../lib/utils')
 
 module.exports = {
 
@@ -17,22 +18,32 @@ module.exports = {
         })
     },
 
+    create(req, res) {
+        return res.render('admin/chefs/create')
+    },
+
+    edit(req, res) {
+        Chef.find(req.params.id, (chef) => {
+            res.render('admin/chefs/edit', { chef })
+        })
+    },
+
     post(req, res) {
 
-        const keys = Object.keys(req.body)
-
-        for (key of keys) {
-            if (req.body[key] == "") {
-               return res.send("Please fill out all fields.")
-            }
-        }
+        if (hasBlankFields(req.body)) {return res.send('Please fill out all fields.')}
 
         Chef.create(req.body, (chef) => {
             return res.redirect(`/admin/chefs/${chef.id}`)
         })
     },
 
-    create(req, res) {
-        return res.render('admin/chefs/create')
+    put(req, res) {
+        
+        if (hasBlankFields(req.body)) {return res.send('Please fill out all fields.')}
+
+        Chef.update(req.body, () => {
+            res.redirect(`/admin/chefs/${req.body.id}`)
+        })
     }
+
 }

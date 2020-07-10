@@ -35,7 +35,9 @@ routes.get('/admin/chefs/', (req, res) => res.redirect('/admin/chefs/index'))
 routes.get('/admin/chefs/index', chefs.index)
 routes.get('/admin/chefs/create', chefs.create)
 routes.get('/admin/chefs/:id', chefs.show)
+routes.get('/admin/chefs/:id/edit', chefs.edit)
 routes.post('/admin/chefs/', chefs.post)
+routes.put('/admin/chefs/', chefs.put)
 
 //Recipes
 routes.post('/admin/recipes', recipes.post)

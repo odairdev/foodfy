@@ -1,0 +1,14 @@
+{% extends "layout_admin.njk" %}
+
+{% block content %}
+
+<form action="/admin/chefs?_method=PUT" method="post">
+
+{% include 'admin/chefs/fields.njk'%}
+
+<input type="hidden" name="id" value="{{chef.id}}">
+
+</form>
+
+{% endblock content %}
+
