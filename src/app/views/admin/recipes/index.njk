@@ -6,7 +6,7 @@
     <div>
         <h2 class="admin-h2">Gerenciar Receitas</h2>
     </div>
-    <div><a href="/admin/create" class="button">Nova Receita</a></div>
+    <div><a href="/admin/recipes/create" class="button">Nova Receita</a></div>
     
 </div>
 
@@ -19,7 +19,7 @@
             </div>
             <div class="admin-card-content">
                 <p class="admin-card-title">{{recipe.title}} </p>
-                <p class="admin-card-author">{{recipe.author}}</p>
+                <p class="admin-card-author">{{recipe.chef_name}}</p>
                 <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
             </div>
         </div>

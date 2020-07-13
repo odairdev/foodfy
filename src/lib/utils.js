@@ -29,6 +29,7 @@ module.exports = {
         for (key of keys) {
             if(data[key] == '') return true
         }
+
         return false
     }
 }

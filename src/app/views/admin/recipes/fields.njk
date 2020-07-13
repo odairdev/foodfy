@@ -1,4 +1,5 @@
 <div class="recipe-identification clearfix">
+
     <h3 class="admin-h3">Imagem da Receita</h3>
     <input 
         type="url" 
@@ -13,12 +14,17 @@
         placeholder="Macarrão com salsicha"
         value="{{recipe.title}}">
     
-    <h3 class="admin-h3">Autor</h3>
-    <input 
-        type="text" 
-        name="author"
-        placeholder="Marcelo Almeida"
-        value="{{recipe.author}}">
+    <h3 class="admin-h3">Chef</h3>
+    <select name="chef">
+        {% for chef in chefs %}
+            <option 
+            value="{{chef.id}}"
+            {% if chef.id == recipe.chef_id %}
+            selected
+            {% endif %}
+            >{{chef.name}}</option>
+        {% endfor %}
+    </select>
 </div>
 
 <h3 class="admin-h3">Ingredientes</h3>
