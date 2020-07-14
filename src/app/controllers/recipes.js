@@ -5,14 +5,34 @@ const recipe = require('../models/recipe')
 module.exports = {
 
     index(req, res) {
+        Recipe.all((recipes) => {return res.render('admin/recipes/index', {recipes})})
+    },
+
+    siteIndex(req, res) {
         Recipe.all((recipes) => {
-            res.render('admin/recipes/index', {recipes})
+            let displayedRecipes = []
+
+            for(let i = 0; i < 6; i++) {
+                displayedRecipes.push(recipes[i])
+            }
+
+            res.render('home/index', {items: displayedRecipes})
         })
+    },
+
+    allRecipes(req, res) {
+        Recipe.all((recipes) => {return res.render('home/recipes', {items: recipes})})
     },
 
     show(req, res) {
         Recipe.find(req.params.id, (recipe) => {
             res.render('admin/recipes/show', { recipe })
+        })
+    },
+
+    siteShow(req, res) {
+        Recipe.find(req.params.id, (recipe) => {
+            res.render('home/recipe', { item: recipe })
         })
     },
 

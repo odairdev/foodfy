@@ -4,24 +4,11 @@ const recipes = require('./src/app/controllers/recipes')
 const chefs = require('./src/app/controllers/chefs')
 const data = require('./data.json')
 
-routes.get('/', function(req, res) {
-    res.render('home/index', {items: data.recipes})
-})
-routes.get('/about', function(req, res) {
-    res.render('home/about')
-})
-routes.get('/recipes', function(req, res) {
-    res.render('home/recipes', {items: data.recipes})
-})
-routes.get('/recipes/:index', function(req, res) {
-    const recipeIndex = req.params.index
-
-    if (recipeIndex >= data.recipes.length) {
-        return res.send('Recipe not found.')
-    }
-
-    res.render('home/recipe', {item: data.recipes[recipeIndex]})
-})
+routes.get('/', recipes.siteIndex)
+routes.get('/about', function(req, res) {res.render('home/about')})
+routes.get('/recipes/:id', recipes.siteShow)
+routes.get('/recipes', recipes.allRecipes)
+routes.get('/chefs', chefs.siteIndex)
 
 //Admin Routes
 routes.get('/admin', function(req, res) {res.redirect("/admin/recipes")})
@@ -34,6 +21,7 @@ routes.get('/admin/chefs/:id', chefs.show)
 routes.get('/admin/chefs/:id/edit', chefs.edit)
 routes.post('/admin/chefs/', chefs.post)
 routes.put('/admin/chefs/', chefs.put)
+routes.delete('/admin/chefs', chefs.delete)
 
 //Recipes
 routes.get('/admin/recipes', recipes.index)

@@ -15,6 +15,21 @@
 
 <h3 class="admin-h3">Receitas</h3>
 
+<section class="admin-cards">
+    {% for recipe in recipes %}
+        <div class="admin-card">
+            <div class="admin-card_img-content">
+                <img src="{{recipe.image}}" alt="">
+            </div>
+            <div class="admin-card-content">
+                <p class="admin-card-title">{{recipe.title}} </p>
+                <p class="admin-card-author">{{chef.name}}</p>
+                <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
 {% endblock content %}
 
 

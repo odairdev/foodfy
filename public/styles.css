@@ -37,10 +37,84 @@ body p {
     clear: both;
 }
 
+input, 
+textarea {
+    margin-top: 10px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 4px 8px;
+}
+
+button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+}
+
+button:focus {
+    outline: none;
+    outline-offset: none;
+}
+
+button[type="submit"],
+button[type="button"] {
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+button[type="button"] {
+    margin-top: 4px;
+}
+
+.button {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: var(--color--purple--);
+    color: white;
+    cursor: pointer;
+}
+
+header {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 90px auto 1fr;
+    align-items: center;
+}
+
 header div {
-    padding: 30px 60px;
     text-align: center;
     display: inline-block;
+}
+
+header div:first-child {
+    align-self: start;
+}
+
+header div:nth-child(2) {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 100%;
+}
+
+.form-filter {
+    display: grid;
+    grid-template-columns: 245px 1fr;
+    align-items: center;
+    gap: 16px;
+}
+
+.form-filter input,
+.form-filter button {
+    margin: 0;
 }
 
 .admin-header {
@@ -280,41 +354,8 @@ footer {
     margin-bottom: 20px;
 }
 
-button{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: none;
-}
-
-button:focus {
-    outline: none;
-    outline-offset: none;
-}
-
-button[type="submit"],
-button[type="button"] {
-    border: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 40px;
-}
-
-button[type="button"] {
-    margin-top: 4px;
-}
-
-.button {
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    background-color: var(--color--purple--);
-    color: white;
-    cursor: pointer;
-}
-
 .button:hover {
-    background-color: var(--color--dark-purple--);
+        filter: brightness(0.9);
 }
 
 button.btn-edit {
@@ -350,6 +391,11 @@ button.btn-edit {
     margin-top: 10px;
 }
 
+.admin-card-content a {
+    text-decoration: none;
+    color: var(--color--purple--);
+}
+
 .admin-card-title {
     color: #111111;
     opacity: 1;
@@ -362,27 +408,6 @@ button.btn-edit {
 }
 
 /* ---ADMIN-INPUTS--- */
-input, 
-textarea {
-    margin-top: 10px;
-    width: 100%;
-    outline: none;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 28px;
-}
-
-input[type="text"],
-input[type="url"] {
-padding: 4px 8px;
-}
-
-textarea {
-    padding: 4px 0 46px 4px;
-}
-
 .recipe-identification {
     display: grid;
     grid-template-columns: 0.3fr 1.7fr;

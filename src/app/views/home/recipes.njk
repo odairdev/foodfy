@@ -10,13 +10,13 @@
 
         {% for item in items %}
 
-            <div class="card" id="{{loop.index0}}">
+            <div class="card" id="{{item.id}}">
                 <div class="card_img-content">
                     <img src="{{item.image}}" alt="{{item.title}}">
                 </div>
                 <div class="card-content">
                     <p class="card-title">{{item.title}}</p>
-                    <p class="card-autor">{{item.author}}</p>
+                    <p class="card-autor">{{item.chef_name}}</p>
                 </div>
             </div>
 
@@ -24,13 +24,13 @@
 
         {% for item in items %}
 
-            <div class="card" id="burger">
+            <div class="card" id="{{item.id}}">
                 <div class="card_img-content">
                     <img src="{{item.image}}" alt="{{item.title}}">
                 </div>
                 <div class="card-content">
                     <p class="card-title">{{item.title}}</p>
-                    <p class="card-autor">{{item.author}}</p>
+                    <p class="card-autor">{{item.chef_name}}</p>
                 </div>
             </div>
 
