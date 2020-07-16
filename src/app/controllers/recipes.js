@@ -21,7 +21,57 @@ module.exports = {
     },
 
     allRecipes(req, res) {
-        Recipe.all((recipes) => {return res.render('home/recipes', {items: recipes})})
+        Recipe.all((recipes) => {
+            return res.render('home/recipes', { items: recipes})
+        })
+    },
+
+    findBy(req, res) {
+        let {filter, limit, page} = req.query
+
+        page = page || 1
+        limit = limit || 6
+        offset = limit * (page - 1)
+
+        let params = {
+            filter,
+            limit,
+            offset,
+            callback(recipes) {
+                const pagination = {
+                    page,
+                    total: Math.ceil(recipes[0].total / limit)
+                }
+
+                res.render('home/search', { recipes, filter, pagination})
+            }
+        }
+
+        Recipe.paginate(params)
+    },
+
+    pagination(req,res) {
+        let {filter, limit, page} = req.query
+
+        page = page || 1
+        limit = limit || 6
+        offset = limit * (page - 1)
+
+        let params = {
+            filter,
+            limit,
+            offset,
+            callback(recipes) {
+                const pagination = {
+                    page,
+                    total: Math.ceil(recipes[0].total / limit)
+                }
+
+                res.render('home/recipes', { items: recipes, filter, pagination})
+            }
+        }
+
+        Recipe.paginate(params)
     },
 
     show(req, res) {

@@ -45,7 +45,7 @@ textarea {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px;
     padding: 4px 8px;
 }
@@ -117,13 +117,18 @@ header div:nth-child(2) {
     margin: 0;
 }
 
-.admin-header {
+.admin-header_bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 80px;
     background-color: black;
+}
+
+header.admin-header {
+    margin-top:0;
+    padding-top: 20px;
 }
 
 .logo-img {
@@ -159,7 +164,7 @@ header div:nth-child(2) {
 }
 
 .wrapper-content {
-    max-width: 320px;
+    max-width: 322px;
     text-align: justify;
     position: absolute;
     left: 6.4%;
@@ -212,6 +217,27 @@ header div:nth-child(2) {
     opacity: 1;
     color: #777777;
     font-size: 14px;
+}
+
+.pagination {
+    position: absolute;
+    left: 50vw;
+    bottom: 20vh;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.pagination a,
+.pagination span {
+    text-decoration: none;
+    padding: 4px 8px;
+    margin: 0 2px;
+}
+
+.pagination a {
+    color: white;
+    background-color: var(--color--purple--);
+    border-radius: 4px;
 }
 
 /* ---Sobre---*/
@@ -311,6 +337,7 @@ footer {
 /* index */
 .admin-links {
     position: relative;
+    align-self: end;
     z-index: 1;
 }
 .admin-links a {

@@ -6,8 +6,9 @@ const data = require('./data.json')
 
 routes.get('/', recipes.siteIndex)
 routes.get('/about', function(req, res) {res.render('home/about')})
+routes.get('/recipes/search', recipes.findBy)
 routes.get('/recipes/:id', recipes.siteShow)
-routes.get('/recipes', recipes.allRecipes)
+routes.get('/recipes', recipes.pagination)
 routes.get('/chefs', chefs.siteIndex)
 
 //Admin Routes

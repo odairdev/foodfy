@@ -6,11 +6,12 @@
         {% endblock %}
         <link rel="stylesheet" href="/styles.css">
     </head>
-    <body> 
-        <div class="admin-header"></div>
+    <body>    
+
+        <div class="admin-header_bg"></div>
 
         <div class="content-wrap">
-            <header>
+            <header class="admin-header">
                 <div class="logo-img">
                     <a href="/"><img src="/assets/logo-white.png" alt="logo Foofy"></a> 
                 </div>
@@ -18,6 +19,7 @@
                     <a href="/admin/recipes">Receitas</a>
                     <a href="/admin/chefs/">Chefs</a>
                 </div>
+                <div></div>
             </header>
             {% block content %}
 
